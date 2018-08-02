@@ -1,0 +1,8 @@
+[IRC]
+server = irc.freenode.net
+port = 6667
+nick = Tuersteherin
+ircchan = #k4cg
+debugchan = #k4cgdebug
+nickservpassword = password
+ignore = user1,user2

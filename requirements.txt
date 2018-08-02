@@ -1,0 +1,5 @@
+#wikitools
+beautifulsoup4
+git+https://github.com/k4cg/AsyncIRC.git
+#markovify
+#tinkerforge
