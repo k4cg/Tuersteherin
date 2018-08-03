@@ -3,7 +3,7 @@
 
 import sys
 import logging
-from rezeptionistin import Rezeptionistin
+from tuersteherin import Tuersteherin
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -15,5 +15,5 @@ if sys.hexversion > 0x03000000:
   raw_input = input
 
 # run bot
-bot = Rezeptionistin()
+bot = Tuersteherin()
 bot.run()

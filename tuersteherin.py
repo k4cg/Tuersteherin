@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 
 from asyncirc.ircbot import IRCBot
 
-class Rezeptionistin(object):
+class Tuersteherin(object):
 
   # Constructor
   #
