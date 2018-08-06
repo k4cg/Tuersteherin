@@ -34,10 +34,16 @@ class Tuersteherin(object):
     self.ircchan=self.config.get('IRC', 'ircchan').split(",")
     self.debugchan=self.config.get('IRC', 'debugchan')
 
+    # optional config
     try:
       self.ignore=self.config.get('IRC','ignore').split(',')
     except (ConfigParser.NoSectionError, ConfigParser.NoOptionError):
       self.ignore = []
+
+    try:
+      self.joindelay=int(self.config.get('IRC','joindelay'))
+    except (ConfigParser.NoSectionError, ConfigParser.NoOptionError):
+      self.joindelay = 0
 
     self.irc = IRCBot(self.server, self.port, self.nick)
 
@@ -85,6 +91,8 @@ class Tuersteherin(object):
 
     # Start Bot
     self.irc.start()
+    
+    time.sleep(self.joindelay)
     for channel in self.ircchan:
       self.irc.join(channel)
     self.irc.join(self.debugchan)

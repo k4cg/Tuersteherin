@@ -6,6 +6,7 @@ ircchan = #k4cg
 debugchan = #k4cgdebug
 nickservpassword = password
 ignore = user1,user2
+joindelay = 5
 
 [Voice]
 delay = 5
